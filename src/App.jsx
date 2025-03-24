@@ -4,6 +4,9 @@ import viteLogo from "/vite.svg";
 import "./App.css";
 import Header from "./Components/Header/Header";
 import CarouselEffect from "./Components/Carousel/CarouselEffect";
+import Category from "./Components/category/category";
+
+
 
 function App() {
   const [count, setCount] = useState(0);
@@ -11,7 +14,8 @@ function App() {
   return (
     <>
       <Header/>
-      <CarouselEffect />
+      <CarouselEffect/>
+      <Category/>
     </>
   );
 }
