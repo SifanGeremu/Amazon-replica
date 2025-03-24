@@ -1,0 +1,18 @@
+.Lower__Container {
+  background-color: black;
+  color: white;
+  cursor: pointer;
+}
+.Lower__Container ul {
+  display: flex;
+  list-style: none;
+  gap: 5px;
+}
+.Lower__Container ul li {
+  padding: 8px;
+}
+.Lower__Container ul li:first-child {
+  display: flex;
+  gap: 2px;
+  align-items: center;
+}
