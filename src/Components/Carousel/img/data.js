@@ -1,8 +1,7 @@
-import image1 from "../img";
-import image2 from "../img";
-import image3 from "../img";
-import image4 from "../img";
-import image5 from "../img";
-import image6 from "../img";
+import image1 from "../img/image1.jpg";
+import image2 from "../img/image2.jpg";
+import image4 from "../img/image4.jpg";
+import image5 from "../img/image5.jpg";
 
-export const image = [image1, image2, image3, image4, image5, image6];
+
+export const image = [image1, image2, image4, image5];
