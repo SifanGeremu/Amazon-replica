@@ -1,0 +1,63 @@
+:root {
+  --primary-color: #febd69;
+  --primary-shadow: #d49644;
+}
+
+.card__container {
+  width: 250px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Fixed rgba syntax */
+  padding: 10px;
+  color: black;
+  text-decoration: none;
+  position: relative;
+  text-align: center;
+}
+
+.card__container:hover .button {
+  display: block;
+}
+
+.card__container img {
+  padding: 10px;
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
+}
+
+.button {
+  display: none;
+  padding: 5px 10px;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  background-color: var(--primary-color);
+  width: 100%;
+  margin: 10px 0;
+  border-radius: 30px;
+  position: absolute;
+  bottom: 10px; /* Ensures it stays inside the card */
+  left: 0;
+}
+
+.button:hover {
+  background-color: var(--primary-shadow); /* Fixed variable reference */
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  padding: 10px 0; /* Fixed padding syntax */
+}
+
+/* Flex layout for product cards */
+.product__Container {
+  display: flex;
+  flex-wrap: wrap; /* Allows wrapping of items */
+  justify-content: center; /* Center the items horizontally */
+  gap: 30px; /* Adjusted for spacing */
+  padding: 20px;
+  margin: 100px auto;
+}
+a {
+  color: black;
+}
