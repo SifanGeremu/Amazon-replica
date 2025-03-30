@@ -1,18 +1,24 @@
 import React from "react";
 import Rating from "@mui/material/Rating";
 import numeral from "numeral";
-import classes from "../product/product.module.css"
+import classes from "../product/product.module.css";
 import CurrencyFormat from "../currency/CurrencyFormat";
+import { Link } from "react-router-dom";
 
-function ProductCard({ product }) {
-  const { image, title, id, rating, price } = product;
+function ProductCard({ product, flex, renderDescription }) {
+  const { image, title, id, rating, price, description } = product;
 
   return (
-    <div className={classes.card__container}>
-      <a href="#">
+    <div
+      className={`${classes.card__container} ${
+        flex ? classes.product__flexed : ""
+      }`}
+    >
+      <Link to={`/products/${id}`}>
         <img src={image} alt={title} />
         <div>
           <h3>{title}</h3>
+          {renderDescription && description && <div>{description}</div>}
         </div>
         <div className={classes.rating}>
           {rating && (
@@ -26,9 +32,8 @@ function ProductCard({ product }) {
           <CurrencyFormat amount={price} />
         </div>
         <button className={classes.button}>Add to Cart</button>
-      </a>
+      </Link>
     </div>
   );
 }
-
-export default ProductCard;
+export default ProductCard
