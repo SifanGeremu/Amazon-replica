@@ -2,6 +2,11 @@
   margin: 0;
   padding: 0;
 }
+.fixed {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
 .Header__container {
   background-color: black;
   display: flex;
@@ -92,20 +97,19 @@
 .Delivery:hover {
   border: 1px solid white;
 }
-.Order :hover{
-     border: 1px solid white;
+.Order :hover {
+  border: 1px solid white;
 }
 .cart {
   size: 50px;
 }
-@media  screen and (max-width:576) {
-  .Header__container{
+@media screen and (max-width: 576) {
+  .Header__container {
     display: flex;
     flex-direction: column !important;
     height: auto;
-
   }
-  .languages{
+  .languages {
     display: none;
   }
 }

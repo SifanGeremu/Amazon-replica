@@ -1,15 +1,17 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import { SlLocationPin } from "react-icons/sl";
 import { BiSearch, BiCart } from "react-icons/bi";
 import classes from "../Header/Header.module.css";
 import LowerHeader from "./LowerHeader";
-
 import logoimage from "../../assets/images/amazonlogo1.jpg";
+import { DataContext } from "../DataProvider/DataProvider";
 
 function Header() {
+  const [state] = useContext(DataContext); // 🔹 Access state from context
+
   return (
-    <>
+    <section className={classes.fixed}>
       <section>
         <section>
           <div className={classes.Header__container}>
@@ -37,10 +39,7 @@ function Header() {
             {/* right side nav */}
             <div>
               <div className={classes.Order}>
-                <img
-                  src='#'
-                  alt=""
-                />
+                <img src="#" alt="" />
                 <section>
                   <option value="">EN</option>
                 </section>
@@ -60,7 +59,8 @@ function Header() {
                 {/* Cart */}
                 <Link to="/cart" className={classes.cart}>
                   <BiCart />
-                  <span>0</span>
+                  <span>{state.basket?.length || 0}</span>{" "}
+                  {/* 🔹 Show cart count */}
                 </Link>
               </div>
             </div>
@@ -68,7 +68,7 @@ function Header() {
         </section>
       </section>
       <LowerHeader />
-    </>
+    </section>
   );
 }
 
