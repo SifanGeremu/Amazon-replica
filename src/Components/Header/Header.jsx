@@ -8,7 +8,7 @@ import logoimage from "../../assets/images/amazonlogo1.jpg";
 import { DataContext } from "../DataProvider/DataProvider";
 
 function Header() {
-  const [state] = useContext(DataContext); // 🔹 Access state from context
+  const [state] = useContext(DataContext); 
 
   return (
     <section className={classes.fixed}>

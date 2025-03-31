@@ -100,9 +100,35 @@
 .Order :hover {
   border: 1px solid white;
 }
+
 .cart {
-  size: 50px;
+  position: relative;
+  display: inline-block;
+  size: 70px;
 }
+
+.cart svg {
+  font-size: 35px;
+  color: #333;
+}
+
+.cart span {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background-color: red;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  width: 18px;
+  height: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
 @media screen and (max-width: 576) {
   .Header__container {
     display: flex;

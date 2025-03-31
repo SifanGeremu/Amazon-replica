@@ -3,9 +3,8 @@ import LayOut from "../../Components/LayOut/LayOut";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 import { productUrl } from "../../API/Endpoints";
-
 import classes from "../../Pages/Results/Results.module.css";
-import ProductCard from "../../Components/product/ProductCard";
+import ProductCard from "../../Components/Product/ProductCard";
 
 const categoryMapping = {
   electronics: "electronics",
@@ -14,22 +13,22 @@ const categoryMapping = {
 };
 
 function Results() {
-  const [results, setResult] = useState([]);
+  const [results, setResults] = useState([]);
   const { categoryName } = useParams();
 
   const validCategory =
-    categoryMapping[categoryName.toLowerCase()] || "electronics"; // Default category if invalid
+    categoryMapping[categoryName?.toLowerCase()] || "electronics"; 
 
   useEffect(() => {
     axios
       .get(`${productUrl}/products/category/${validCategory}`)
       .then((res) => {
         console.log("API Response:", res.data);
-        setResult(Array.isArray(res.data) ? res.data : []);
+        setResults(Array.isArray(res.data) ? res.data : []);
       })
       .catch((err) => {
         console.error("Error fetching data:", err);
-        setResult([]);
+        setResults([]);
       });
   }, [categoryName]);
 
@@ -41,7 +40,11 @@ function Results() {
         <hr />
         <div className={classes.Products__container}>
           {results.map((product) => (
-            <ProductCard key={product.id} product={product} />
+            <ProductCard
+              key={product.id}
+              product={product}
+              renderAddToCart={true}
+            />
           ))}
         </div>
       </section>

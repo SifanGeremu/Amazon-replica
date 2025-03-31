@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import ProductCard from "./ProductCard";
+import ProductCard from "../product/ProductCard"
 import classes from "../product/product.module.css";
 
 function Product() {
@@ -15,7 +15,11 @@ function Product() {
   return (
     <section className={classes.product__Container}>
       {products.map((singleProduct) => (
-        <ProductCard product={singleProduct} key={singleProduct.id} />
+        <ProductCard
+          product={singleProduct}
+          key={singleProduct.id}
+          renderAddToCart={true}
+        />
       ))}
     </section>
   );

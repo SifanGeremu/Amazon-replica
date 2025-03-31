@@ -1,0 +1,142 @@
+.Cart {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 20px;
+  gap: 20px;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+}
+
+.Products__container {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+}
+
+.ProductCard {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  flex-wrap: wrap; 
+  box-sizing: border-box;
+}
+
+.ProductCard img {
+  width: 80px; 
+  height: 80px; 
+  object-fit: contain;
+  border-radius: 5px;
+  margin-right: 15px;
+}
+
+.ProductCard .productDetails {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.subTotal {
+  flex: 1;
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ddd;
+  position: sticky;
+  top: 100px;
+  max-width: 300px;
+  box-sizing: border-box;
+}
+
+.Cart a {
+  display: block;
+  text-align: center;
+   background: #ff9900; 
+  color: white;
+  padding: 10px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 10px;
+  width: 100%;
+}
+
+/* .Cart a:hover {
+  background: #e68a00;
+} */
+.CartItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Ensures spacing */
+  gap: 15px;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  width: 100%;
+}
+
+.ProductCard {
+  flex: 1; /* Ensures the product card takes up space */
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.QuantityControls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.QuantityControls button {
+  background-color: #ff9900;
+  border: none;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.QuantityControls button:hover {
+  background-color: #e68a00;
+  transform: scale(1.05);
+}
+
+.QuantityControls button:active {
+  transform: scale(0.95);
+}
+
+.removeButton {
+  background-color: #ff4d4d;
+  border: none;
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.removeButton:hover {
+  background-color: #cc0000;
+}
+
+.removeButton:active {
+  transform: scale(0.95);
+}
+
