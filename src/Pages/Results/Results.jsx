@@ -4,7 +4,7 @@ import { useParams } from "react-router-dom";
 import axios from "axios";
 import { productUrl } from "../../API/Endpoints";
 import classes from "../../Pages/Results/Results.module.css";
-import ProductCard from "../../Components/Product/ProductCard";
+import ProductCard from "../../Components/product/ProductCard";
 
 const categoryMapping = {
   electronics: "electronics",

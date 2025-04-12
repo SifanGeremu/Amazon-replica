@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import ProductCard from "../product/ProductCard"
+import ProductCard from "../../Components/product/ProductCard";
 import classes from "../product/product.module.css";
 
 function Product() {
