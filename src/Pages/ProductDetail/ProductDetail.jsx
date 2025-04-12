@@ -3,7 +3,7 @@ import LayOut from "../../Components/LayOut/LayOut";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 import { productUrl } from "../../API/Endpoints";
-import ProductCard from "../../Components/Product/ProductCard";
+import  ProductCard  from "../../Components/product/ProductCard";
 import Loader from "../../Components/Loader/Loader";
 
 function ProductDetail() {
