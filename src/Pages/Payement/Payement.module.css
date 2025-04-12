@@ -1,0 +1,105 @@
+.Payement {
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.Payement_header {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+  background-color: rgb(186, 130, 25);
+  padding: 30px;
+}
+
+.flex {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+hr {
+  margin: 20px 0;
+  border: 0;
+  border-top: 1px solid #ccc;
+}
+
+.CardElement {
+  margin-top: 20px;
+}
+
+.PaymentForm {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.PaymentForm h3 {
+  margin-bottom: 15px;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+button {
+  padding: 12px 20px;
+  background-color: silver;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:disabled {
+  background-color: #dcdcdc;
+  cursor: not-allowed;
+}
+
+button:hover:not(:disabled) {
+  background-color: orange;
+}
+
+.ErrorMessage {
+  color: red;
+  font-size: 14px;
+  margin-top: 10px;
+  padding: 5px;
+  background-color: #f8d7da;
+  border-radius: 5px;
+  border: 1px solid #f5c6cb;
+}
+
+.CardElement {
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  margin-bottom: 20px;
+}
+
+.CardElement div {
+  border: none;
+  padding: 10px;
+}
+
+/* Styling for Address section */
+.flex h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.flex div {
+  font-size: 16px;
+  color: #333;
+}
+.total h3 {
+  display: flex;
+  font-size: 17px;
+}
+.amount {
+  align-items: center;
+  text-align: center;
+  font-size: 30px;
+}

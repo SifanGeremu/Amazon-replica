@@ -8,7 +8,7 @@ import logoimage from "../../assets/images/amazonlogo1.jpg";
 import { DataContext } from "../DataProvider/DataProvider";
 
 function Header() {
-  const [state] = useContext(DataContext); 
+  const [{ user, basket }, dispatch] = useContext(DataContext);
 
   return (
     <section className={classes.fixed}>
@@ -26,13 +26,14 @@ function Header() {
             <div className={classes.Delivery}>
               <span>
                 <SlLocationPin />
-                <p>delivered To</p>
+                <p>Delivered To</p>
                 Ethiopia
               </span>
             </div>
 
+            {/* search */}
             <div className={classes.Search}>
-              <input type="text" placeholder="search product" />
+              <input type="text" placeholder="Search product" />
               <BiSearch />
             </div>
 
@@ -44,10 +45,13 @@ function Header() {
                   <option value="">EN</option>
                 </section>
 
-                {/* Sign In */}
+                {/* Sign In / Sign Out */}
                 <Link to="/auth" className={classes.languages}>
-                  <p>Sign In</p>
-                  <span>Account and Lists</span>
+                  <div>
+                    <p>Hello {user ? user.email.split("@")[0] : "Guest"}</p>
+                    <p>{user ? "Sign Out" : "Sign In"}</p>
+                    <span>Account and Lists</span>
+                  </div>
                 </Link>
 
                 {/* Orders */}
@@ -59,8 +63,7 @@ function Header() {
                 {/* Cart */}
                 <Link to="/cart" className={classes.cart}>
                   <BiCart />
-                  <span>{state.basket?.length || 0}</span>{" "}
-                  {/* 🔹 Show cart count */}
+                  <span>{basket?.length || 0}</span>
                 </Link>
               </div>
             </div>
