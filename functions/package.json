@@ -2,15 +2,16 @@
   "name": "functions",
   "description": "Cloud Functions for Firebase",
   "scripts": {
-    "serve": "firebase emulators:start --only functions",
-    "shell": "firebase functions:shell",
-    "start": "npm run shell",
-    "deploy": "firebase deploy --only functions",
-    "logs": "firebase functions:log"
-  },
+  "dev": "vite",
+  "build": "vite build",
+  "preview": "vite preview"
+},
+
   "engines": {
-    "node": "20"
+    "node": "18.x"
   },
+  
+
   "main": "index.js",
   "dependencies": {
     "cors": "^2.8.5",

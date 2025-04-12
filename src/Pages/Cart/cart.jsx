@@ -1,11 +1,13 @@
 import React, { useContext } from "react";
 import LayOut from "../../Components/LayOut/LayOut";
 import { DataContext } from "../../Components/DataProvider/DataProvider";
-import  ProductCard  from "../../Components/product/ProductCard";
+const ProductCard = React.lazy(() =>
+  import("../../Components/product/ProductCard")
+);
 import CurrencyFormat from "../../Components/currency/CurrencyFormat";
 import { Link } from "react-router-dom";
 import classes from "../Cart/Cart.module.css";
-import { Type } from "../../utility/ActionType"; // Import action types
+import { Type } from "../../utility/ActionType"; 
 
 function Cart() {
   const [{ basket }, dispatch] = useContext(DataContext);
